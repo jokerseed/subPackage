@@ -53,9 +53,12 @@ var DebugPlatform = (function () {
             });
         });
     };
+    DebugPlatform.prototype.loadsubpackage = function (obj) {
+    };
     return DebugPlatform;
 }());
 __reflect(DebugPlatform.prototype, "DebugPlatform", ["Platform"]);
 if (!window.platform) {
     window.platform = new DebugPlatform();
 }
+//# sourceMappingURL=Platform.js.map

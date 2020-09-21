@@ -69,6 +69,12 @@ class Main extends eui.UILayer {
             console.log("加载失败");
         }, this);
 
+        await ToolUtil.getLoadSub("config2", function () {
+            console.log("加载成功");
+        }, function () {
+            console.log("加载失败");
+        }, this);
+
         const result = RES.getRes("description_json")
         console.log("获取配置", result);
         this.startAnimation(result);

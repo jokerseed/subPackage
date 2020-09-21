@@ -105,9 +105,19 @@ var Main = (function (_super) {
                     case 1:
                         _a.sent();
                         this.createGameScene();
-                        return [4 /*yield*/, RES.getResAsync("description_json")];
+                        // const result = await RES.getResAsync("description_json")
+                        // this.startAnimation(result);
+                        return [4 /*yield*/, ToolUtil.getLoadSub("config", function () {
+                                console.log("加载成功");
+                            }, function () {
+                                console.log("加载失败");
+                            }, this)];
                     case 2:
-                        result = _a.sent();
+                        // const result = await RES.getResAsync("description_json")
+                        // this.startAnimation(result);
+                        _a.sent();
+                        result = RES.getRes("description_json");
+                        console.log("获取配置", result);
                         this.startAnimation(result);
                         return [4 /*yield*/, platform.login()];
                     case 3:
@@ -267,3 +277,4 @@ var Main = (function (_super) {
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
+//# sourceMappingURL=Main.js.map

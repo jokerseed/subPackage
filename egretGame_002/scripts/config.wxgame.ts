@@ -67,6 +67,11 @@ const config: ResourceManagerConfig = {
                                 "includes": [
                                     "resource/config/game.js"
                                 ]
+                            }, {
+                                root: "resource/config2",
+                                "includes": [
+                                    "resource/config/game.js"
+                                ]
                             }
                         ]
                     })

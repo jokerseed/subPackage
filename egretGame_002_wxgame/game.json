@@ -12,6 +12,10 @@
 		{
 			"name": "config",
 			"root": "resource/config"
+		},
+		{
+			"name": "config2",
+			"root": "resource/config2"
 		}
 	]
 }
